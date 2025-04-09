@@ -1,27 +1,24 @@
-package ej9;
+package ej13;
 
-public abstract class Persona // Las clases abstractas no se pueden instanciar
+public class Persona/* implements MostrarDatos*/ // En lugar de extends se usa implements
 {
 	private String nombre;
 	private String apellido;
-	private int edad;
 	
-	public Persona(String nombre, String apellido, int edad)
+	
+	public Persona()
+	{
+		
+	}
+	
+	public Persona(String nombre, String apellido)
 	{
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.edad = edad;
-	}
-
-	public Persona()
-	{
-		this.nombre = "#####";
-		this.apellido = "#####";
-		this.edad = 0;
 	}
 	
-    /////////////////////////////////////////////////////////////
-
+	//////////////////////////////////////////////////
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -38,18 +35,11 @@ public abstract class Persona // Las clases abstractas no se pueden instanciar
 		this.apellido = apellido;
 	}
 
-	public int getEdad() {
-		return edad;
-	}
-
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-	
-	/////////////////////////////////////////////////////////////
-	
-	/* METODO ABSTRACTO: Es un requisito obligatorio para las clases que hereden de Persona.*/
-	
-	public abstract void imprimirDatos();
+	/*@Override
+	public void imprimirDatos()
+	{
+		System.out.println("Nombre: "+nombre);
+		System.out.println("Apellido: "+apellido);
+	}*/
 	
 }
